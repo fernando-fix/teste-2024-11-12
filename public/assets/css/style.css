@@ -1,0 +1,53 @@
+:root {
+  --white: #ffffff;
+  --light-gray1: #D4DCC0;
+  --dark-blue: #106B60;
+  --brown: #C69C6D;
+  --light-black: #414141;
+  --dark-green: #027E68;
+  --light-green: #A2C648;
+  --dark-green2: #0A524A;
+  --light-gray2: #D6D6D6;
+  --green: #43A737;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-green);
+}
+body header {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  opacity: 1;
+}
+body header .container #header {
+  height: 107px;
+}
+body header .container #header a {
+  size: 16px;
+  line-height: 16px;
+}
+body header .container #header a.nav-link {
+  color: var(--dark-green2);
+}
+body header .container #header a.button-link {
+  display: block;
+  color: var(--white);
+  border-radius: 28px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  width: 265px;
+  background-image: linear-gradient(270deg, var(--dark-green) 0%, var(--light-green) 100%);
+  transition: all 0.8s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+body header .container #header a.button-link:hover {
+  background-image: linear-gradient(270deg, var(--light-green) 0%, var(--dark-green) 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
