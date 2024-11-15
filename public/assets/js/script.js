@@ -19,7 +19,7 @@ btn_home.addEventListener("click", (e) => {
     e.preventDefault();
     if (window.scrollY == 0) {
         console.log('Você já está na página inicial')
-        location.reload();
+        window.location.reload(true);
     } else {
         window.scrollTo(0, 0);
     }

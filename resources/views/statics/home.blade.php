@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo.png') }}" type="image/x-icon">
     <title>Kombi</title>
 </head>
 
@@ -21,18 +22,28 @@
                 <a href="#" id="home_link">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
                 </a>
-                <nav class="d-flex align-items-center">
+                <nav id="menu_desktop" class="d-flex align-items-center">
                     <ul class="d-flex list-unstyled mb-0 align-items-center">
-                        <li>
-                            <a class="nav-link" href="#servicos">Nossos serviços</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#sobre">Sobre nós</a>
-                        </li>
-                        <li>
-                            <a class="button-link" href="">SOLICITE UM ORÇAMENTO</a>
-                        </li>
+                        <li><a class="nav-link" href="#servicos">Nossos serviços</a></li>
+                        <li><a class="nav-link" href="#sobre">Sobre nós</a></li>
+                        <li><a class="button-link" href="#orcamento">SOLICITE UM ORÇAMENTO</a></li>
                     </ul>
+                </nav>
+                <nav id="menu_mobile">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="menu-hamburger">
+                            <span class="menu-line"></span>
+                            <span class="menu-line"></span>
+                            <span class="menu-line"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#servicos">Nossos serviços</a>
+                        <a class="dropdown-item" href="#sobre">Sobre nós</a>
+                        <a class="dropdown-item" href="#orcamento">SOLICITE UM ORÇAMENTO</a>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -56,50 +67,116 @@
             </div>
         </section>
         <section id="servicos">
-            <div class="bg-primary">
-                <div>
-                    <div>A farmácia de manipulação</div>
-                    <div>sob medida para você e seu pet</div>
+            <div class="overview">
+                <div class="inner-overview">
+                    <div class="hr">
+                        <hr>
+                    </div>
+                    <div class="title">
+                        A farmácia de manipulação <br>
+                        <b>sob medida para você e seu pet</b>
+                    </div>
+                    <div class="hr">
+                        <hr>
+                    </div>
                 </div>
-                <hr>
             </div>
         </section>
         <section>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae cupiditate aliquid veniam
+            placeat, enim adipisci officiis dolor neque expedita quas. Accusantium, animi molestias? Consectetur et esse
+            dolorem fugit quibusdam.
         </section>
     </main>
     <footer>
 
     </footer>
 
+    <script src="{{ asset('assets/js/jquery-3.2.1.slim.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
