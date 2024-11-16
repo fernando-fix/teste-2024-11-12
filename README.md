@@ -53,6 +53,12 @@ Garante a segurança das sessões e outros recursos:
 php artisan key:generate
 ```
 
+### Habilitar salvar arquivos no servidor
+
+```bash
+php artisan storage:link
+```
+
 ## Passo 5: Subir o banco de dados com migrations e seeder (opção 1)
 
 ### Rodar Migrações
