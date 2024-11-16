@@ -18,6 +18,10 @@
   font-family: "mplus-1", sans-serif;
 }
 
+.container {
+  max-width: 1320px !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -35,9 +39,6 @@ body header {
   left: 0;
   right: 0;
   z-index: 999;
-}
-body header .container {
-  max-width: 1320px !important;
 }
 body header .container #header {
   height: 107px;
@@ -126,6 +127,16 @@ body #banner .swiper-slide img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 499px) {
+  body #banner .swiper-slide img {
+    height: 250px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  body #banner .swiper-slide img {
+    height: 315px;
+  }
+}
 body #banner .swiper-pagination {
   bottom: 10px;
 }
@@ -148,10 +159,9 @@ body #banner .swiper-pagination-bullet-active {
 body #servicos {
   background: transparent linear-gradient(180deg, #FFFFFF 0%, #D4DCC0 47%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
   opacity: 1;
-  height: 500px;
 }
 body #servicos .overview {
-  height: 274;
+  height: 274px;
 }
 body #servicos .overview .inner-overview {
   position: relative;
@@ -164,12 +174,12 @@ body #servicos .overview .inner-overview .title {
   text-align: center;
   color: var(--dark-blue);
 }
-@media (min-width: 0px) and (max-width: 500px) {
+@media (min-width: 0px) and (max-width: 499px) {
   body #servicos .overview .inner-overview .title {
     font-size: 20px;
   }
 }
-@media (min-width: 499px) and (max-width: 749px) {
+@media (min-width: 500px) and (max-width: 749px) {
   body #servicos .overview .inner-overview .title {
     font-size: 30px;
   }
@@ -185,22 +195,242 @@ body #servicos .overview .inner-overview .hr hr {
   border-radius: 5px;
   width: 100%;
 }
-body #servicos .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-  width: 90%;
-  max-width: 600px;
+body #servicos .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 24px;
 }
 body #servicos .item {
-  background-color: #007BFF;
-  color: white;
-  font-size: 1.5rem;
+  width: 414px;
+  height: 469px;
+  border: 1px solid var(--brown);
+  border-radius: 0px 350px 0px 0px;
+  background-color: white;
+}
+body #servicos .item .item-top {
+  height: 47%;
+  position: relative;
+}
+body #servicos .item .item-top .item-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+}
+body #servicos .item .item-top .item-icon {
+  position: absolute;
+  bottom: -30px;
+  left: 30px;
+  border: 1px solid var(--brown);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 1;
+}
+body #servicos .item .item-top::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 94%;
+  height: 1px;
+  background-color: var(--brown);
+  z-index: 0;
+}
+body #servicos .item .item-bottom {
+  height: 53%;
+}
+body #servicos .item .item-bottom .item-title {
+  color: var(--dark-blue);
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 40px;
+  padding-left: 30px;
+}
+body #servicos .item .item-bottom .item-content {
+  color: var(--light-black);
+  font-size: 16px;
+  margin-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body #servicos .btn-solicite-orcamento {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100px;
-  border-radius: 5px;
+}
+body #servicos .btn-solicite-orcamento a {
+  display: block;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 28px;
+  height: 56px;
+  line-height: 56px;
   text-align: center;
+  width: 265px;
+  background: linear-gradient(270deg, var(--light-green) 0%, var(--dark-green) 50%, var(--light-green) 100%);
+  background-size: 200% 100%;
+  transition: all 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+body #servicos .btn-solicite-orcamento a:hover {
+  background-position: right center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  body #servicos .btn-solicite-orcamento {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 500px) and (max-width: 749px) {
+  body #servicos .btn-solicite-orcamento {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+body #banner2 {
+  position: relative;
+  margin-bottom: 110px;
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  body #banner2 {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 500px) and (max-width: 749px) {
+  body #banner2 {
+    margin-bottom: 80px;
+  }
+}
+body #banner2 img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  body #banner2 img {
+    height: 250px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 500px) and (max-width: 1500px) {
+  body #banner2 img {
+    height: 315px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+body #banner2 a {
+  display: block;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 28px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  width: 265px;
+  background: linear-gradient(270deg, var(--light-green) 0%, var(--dark-green) 50%, var(--light-green) 100%);
+  background-size: 200% 100%;
+  transition: all 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body #banner2 a:hover {
+  background-position: right center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+body #sobrenos {
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 1399px) {
+  body #sobrenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+body #sobrenos .sobrenos {
+  display: flex;
+}
+@media (min-width: 0px) and (max-width: 1399px) {
+  body #sobrenos .sobrenos {
+    justify-content: center;
+  }
+}
+body #sobrenos .sobrenos .texto-icones {
+  display: flex;
+  max-width: 50%;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  body #sobrenos .sobrenos .texto-icones {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+body #sobrenos .sobrenos .texto-icones .texto {
+  padding-left: 30px;
+}
+body #sobrenos .sobrenos .texto-icones .texto .title {
+  color: var(--dark-blue);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+body #sobrenos .sobrenos .texto-icones .texto .content {
+  color: var(--light-black);
+  font-size: 16px;
+  padding-right: 30px;
+}
+body #sobrenos .sobrenos .texto-icones .icones {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+body #sobrenos .sobrenos .texto-icones .icones img {
+  height: 120px;
+  width: auto;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  body #sobrenos .sobrenos .texto-icones .icones {
+    padding-top: 30px;
+    flex-direction: row;
+  }
+  body #sobrenos .sobrenos .texto-icones .icones img {
+    margin-bottom: 30px;
+  }
+}
+body #sobrenos .banner img {
+  width: 838px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 1400px) and (max-width: 1800px) {
+  body #sobrenos .banner img {
+    width: 45%;
+  }
+}
+@media (min-width: 0px) and (max-width: 1399px) {
+  body #sobrenos .banner img {
+    max-width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -45,6 +45,11 @@
     }
 }
 
+// Reusable
+.container {
+    max-width: 1320px !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -64,8 +69,6 @@ body {
         z-index: 999;
 
         .container {
-
-            max-width: 1320px !important;
 
             #header {
                 height: 107px;
@@ -158,6 +161,14 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @include responsive(0px, 499px) {
+                height: 250px;
+            }
+
+            @include responsive(500px, 1000px) {
+                height: 315px;
+            }
         }
 
         /* Estilos para os indicadores */
@@ -189,11 +200,9 @@ body {
 
         background: transparent linear-gradient(180deg, #FFFFFF 0%, #D4DCC0 47%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
         opacity: 1;
-        height: 500px;
 
         .overview {
-            height: 274;
-
+            height: 274px;
 
             .inner-overview {
 
@@ -206,10 +215,12 @@ body {
                     font-size: 36px;
                     text-align: center;
                     color: var(--dark-blue);
-                    @include responsive(0px, 500px) {
+
+                    @include responsive(0px, 499px) {
                         font-size: 20px;
                     }
-                    @include responsive(499px, 749px) {
+
+                    @include responsive(500px, 749px) {
                         font-size: 30px;
                     }
                 }
@@ -229,26 +240,233 @@ body {
             }
         }
 
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            width: 90%;
-            max-width: 600px;
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 24px;
         }
 
         .item {
-            background-color: #007BFF;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
+            width: 414px;
+            height: 469px;
+            border: 1px solid var(--brown);
+            border-radius: 0px 350px 0px 0px;
+            background-color: white;
+
+            .item-top {
+                // background-color: red;
+                height: 47%;
+                position: relative;
+
+                .item-img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    overflow: visible;
+                }
+
+                .item-icon {
+                    position: absolute;
+                    bottom: -30px;
+                    left: 30px;
+                    border: 1px solid var(--brown);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    z-index: 1;
+                }
+            }
+
+            .item-top::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 94%;
+                height: 1px;
+                background-color: var(--brown);
+                z-index: 0;
+            }
+
+            .item-bottom {
+                height: 53%;
+
+                .item-title {
+                    color: var(--dark-blue);
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-top: 40px;
+                    padding-left: 30px;
+                }
+
+                .item-content {
+                    color: var(--light-black);
+                    font-size: 16px;
+                    margin-top: 25px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+
+        }
+
+        .btn-solicite-orcamento {
+            padding-top: 60px;
+            padding-bottom: 110px;
+            text-align: center;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100px;
-            border-radius: 5px;
-            text-align: center;
+
+            a {
+                @include button-link();
+            }
+
+            @include responsive(0px, 499px) {
+                padding-top: 30px;
+                padding-bottom: 60px;
+            }
+
+            @include responsive(500px, 749px) {
+                padding-top: 50px;
+                padding-bottom: 80px;
+            }
+
+        }
+
+    }
+
+    #banner2 {
+        position: relative;
+        margin-bottom: 110px;
+
+        @include responsive(0px, 499px) {
+            margin-bottom: 60px;
+        }
+
+        @include responsive(500px, 749px) {
+            margin-bottom: 80px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @include responsive(0px, 499px) {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+
+            }
+
+            @include responsive(500px, 1500px) {
+                height: 315px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        a {
+            @include button-link();
+            display: block;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    #sobrenos {
+        position: relative;
+
+        @include responsive(0px, 1399px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sobrenos {
+            display: flex;
+
+            @include responsive(0px, 1399px) {
+                justify-content: center;
+            }
+
+            .texto-icones {
+                display: flex;
+                max-width: 50%;
+
+                @include responsive(0px, 0999px) {
+                    flex-direction: column;
+                    max-width: 500px;
+                }
+
+                .texto {
+
+                    padding-left: 30px;
+
+                    .title {
+                        color: var(--dark-blue);
+                        font-size: 36px;
+                        margin-bottom: 30px;
+                    }
+
+                    .content {
+                        color: var(--light-black);
+                        font-size: 16px;
+                        padding-right: 30px;
+                    }
+                }
+
+                .icones {
+                    padding-top: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    gap: 15px;
+
+                    img {
+                        height: 120px;
+                        width: auto;
+                    }
+
+                    @include responsive(0px, 0999px) {
+                        padding-top: 30px;
+                        flex-direction: row;
+
+                        img {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .banner {
+
+            img {
+                width: 838px;
+                height: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                @include responsive(1400px, 1800px) {
+                    width: 45%;
+                }
+
+                @include responsive(0px, 1399px) {
+                    max-width: 90%;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
         }
     }
 }
